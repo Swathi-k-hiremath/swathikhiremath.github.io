@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="tab-content active">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    Insert a brief introduction about yourself here. Highlight your skills, experience, and what makes you unique as a web developer or designer.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <div class="container">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="https://github.com/yourusername/project1" target="_blank">GitHub Repository</a>
+                    </li>
+                    <li>
+                        <h3>Project 2</h3>
+                        <p>Description of Project 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="https://github.com/yourusername/project2" target="_blank">GitHub Repository</a>
+                    </li>
+                    <!-- Add more projects as needed -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>If you want to get in touch with me, feel free to send me an email or connect with me on social media.</p>
+                <div class="contact-links">
+                    <a href="mailto:youremail@example.com" class="contact-link">Email</a>
+                    <a href="#" class="contact-link">LinkedIn</a>
+                    <a href="#" class="contact-link">GitHub</a>
+                    <!-- Add more contact links as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Add click event listeners to the navigation links
+    document.querySelector("nav ul li:nth-child(1) a").addEventListener("click", function(e) {
+      e.preventDefault();
+      showSection("about");
+    });
+    document.querySelector("nav ul li:nth-child(2) a").addEventListener("click", function(e) {
+      e.preventDefault();
+      showSection("projects");
+    });
+  
+    document.querySelector("nav ul li:nth-child(3) a").addEventListener("click", function(e) {
+      e.preventDefault();
+      showSection("contact");
+    });
+  
+    // Function to show the selected section and hide other sections
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      for (const section of sections) {
+        section.classList.remove("active");
+      }
+      document.getElementById(sectionId).classList.add("active");
+    }
+  });
+</script>
+</html>
