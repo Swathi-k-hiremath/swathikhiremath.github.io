@@ -48,6 +48,8 @@ main {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .project-item {
